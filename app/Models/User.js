@@ -15,14 +15,18 @@ class User extends Model {
      * it to the database.
      */
     this.addHook('beforeSave', async (userInstance) => {
-      if (userInstance.dirty.password) {
-        userInstance.password = await Hash.make(userInstance.password)
+      if (userInstance.dirty.ds_senha) {
+        userInstance.ds_senha = await Hash.make(userInstance.ds_senha)
       }
     })
   }
 
   static get table () {
     return 'tb_usuario'
+  }
+
+  static get primaryKey () {
+    return 'co_seq_usuario'
   }
 
   /**

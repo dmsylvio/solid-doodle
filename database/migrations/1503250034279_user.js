@@ -6,11 +6,7 @@ const Schema = use('Schema')
 class UserSchema extends Schema {
   up () {
     this.create('tb_usuario', (table) => {
-      //table.increments()
-      table
-        .integer('co_seq_usuario', 11)
-        .unsigned()
-        .primary()
+      table.increments('co_seq_usuario')
       table.integer('co_empresa', 11).nullable()
       table.integer('co_instituicao', 11).nullable()
       table.integer('co_estudante', 11).nullable()

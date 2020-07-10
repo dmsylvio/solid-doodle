@@ -52,8 +52,8 @@ module.exports = {
     serializer: 'lucid',
     model: 'App/Models/User',
     scheme: 'basic',
-    uid: 'ds_login',
-    password: 'ds_senha'
+    uid: 'email',
+    password: 'password'
   },
 
   /*
